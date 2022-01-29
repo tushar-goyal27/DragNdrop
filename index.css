@@ -1,0 +1,90 @@
+* {
+  font-family: sans-serif;
+}
+
+.icon-bar {
+  position: fixed;
+  top: 12%;
+  right: 50px;
+  margin-top: 30px;
+  /* width: 50px; */
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(219, 215, 215);
+  border-radius: 10px;
+  padding: 0px;
+  background-color: #f1f0f5;
+}
+
+.icon-bar i {
+  color: black;
+  font-size: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  text-align: center;
+}
+.icon-bar .add-elements {
+  text-align: center;
+  padding: 5px;
+  font-size: 18px;
+  font-family: sans-serif;
+  border-bottom: 2px solid;
+  /* background-color:#f0ffff; */
+
+  font-weight: bold;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: black;
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+}
+.icon-text {
+  display: none;
+  font-size: 16px;
+  font-style: bold;
+}
+
+.fa:hover .icon-text {
+  display: block;
+}
+
+.context-menu {
+  text-align: center;
+  position: fixed;
+  /* top: 35%; */
+  right: 50px;
+  /* margin-top: 30px; */
+  width: max-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(219, 215, 215);
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #f1f0f5;
+  font-size: 16px;
+}
+
+input[type="color"] {
+  height: 38px;
+  width: 44px;
+  cursor: pointer;
+  border: none;
+}
+
+label {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  align-self: center;
+}
+
+.xyz {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+}
