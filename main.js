@@ -1,14 +1,10 @@
 var elements = document.getElementsByClassName('element');
-var text=document.getElementById('TEXT');
-var bg=document.getElementById('BG');
-var fontsize=document.getElementById('fontsize');
 
+var editElement = '';
 
 for (var i = 0; i < elements.length; i++) {
   id = '';
   elements[i].addEventListener('dragstart', (e) => {
-    // e.preventDefault();
-    // e.dataTransfer.setData('elementID', e.target.id);
     id = e.target.id;
   });
 
@@ -16,9 +12,12 @@ for (var i = 0; i < elements.length; i++) {
     e.preventDefault();
     var x = e.clientX;
     var y = e.clientY;
-    // id = e.dataTransfer.getData('elementID');
-    console.log(x);
-    document.getElementsByClassName('container')[0].insertAdjacentHTML('afterbegin', componentList[id]);
+    document.getElementsByClassName('container')[0].innerHTML += componentList[id];
+    var recent = document.getElementsByClassName('justAdded')[0];
+    recent.style.position = 'absolute';
+    recent.style.left = x + 'px';
+    recent.style.top = y + 'px';
+    recent.classList.remove('justAdded');
     for (var i = 0; i < components.length; i++) {
       move(components[i]);
     }
@@ -37,7 +36,6 @@ function move(component) {
   var yinitial = 0;
 
   component.addEventListener('dragstart', (e) => {
-    // e.preventDefault();
     xinitial = e.clientX;
     yinitial = e.clientY;
   });
@@ -47,37 +45,41 @@ function move(component) {
     var x = e.clientX;
     var y = e.clientY;
     e.target.style.position = "absolute";
-    // console.log("xi" + xinitial);
-    // console.log("yi" + yinitial);
-    // console.log("x" + x);
-    // console.log("y" + y);
-    // console.log("xf" + Math.abs(x - xinitial));
-    // console.log("yf" + Math.abs(y - yinitial));
     e.target.style.left = x + 'px';
     e.target.style.top = y + 'px';
   });
-  components[i].addEventListener('contextmenu', (e) => {
+  component.addEventListener('contextmenu', (e) => {
     e.preventDefault();
-
-    if (document.getElementById("contextMenu").style.display == "block") {
-      // console.log(e.target.style.color);
-      e.target.style.color=text.value;
-      // console.log(e.target.style.backgroundColor)
-      e.target.style.backgroundColor=bg.value;
-      // console.log(e.target.style.backgroundColor)
-      e.target.style.fontSize=fontsize.value + 'px';
-      // console.log(e.target.style.color);
-      document.getElementById("contextMenu").style.display = "none";
-      e.target.contentEditable = true;
-    } else {
-      var menu = document.getElementById("contextMenu");
-      menu.style.display = "block";
-      e.target.contentEditable = false;
-      // menu.style.left = e.pageX + "px";
-      // menu.style.top = e.pageY + "px";
-    }
-    document.getElementById('fontsize').value=15+'px';
-    document.getElementById('TEXT').value='#000';
-    document.getElementById('BG').value='#FFFFFF' ;
+    editElement = e.target;
   });
 }
+
+document.getElementById('TEXT').addEventListener('change', (e) => {
+  editElement.style.color = e.target.value;
+});
+
+document.getElementById('BG').addEventListener('change', (e) => {
+  editElement.style.backgroundColor = e.target.value;
+});
+
+document.getElementById('fontsize').addEventListener('change', (e) => {
+  editElement.style.fontSize = e.target.value + 'px';
+});
+
+document.getElementById('delete').addEventListener('click', (e) => {
+  e.preventDefault();
+  while(! editElement.classList.contains('component')) {
+    editElement = editElement.parentElement;
+  }
+
+  editElement.remove();
+
+})
+
+document.getElementById('clearScr').addEventListener('click', (e) => {
+  location.reload();
+})
+document.onload(alert(`Insturions:
+  -> Drag components from the toolbox. You can change the positions afterwards too.
+  -> Double Click to edit text.
+  -> Right Click and the use edit box to edit text properties.`))
