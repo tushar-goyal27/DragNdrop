@@ -4,10 +4,10 @@
 
 .icon-bar {
   position: fixed;
-  top: 12%;
-  right: 50px;
+  top: 5%;
+  right: 10px;
   margin-top: 30px;
-  /* width: 50px; */
+  width: 130px;
   display: flex;
   flex-direction: column;
   border: 2px solid rgb(219, 215, 215);
@@ -54,10 +54,11 @@
 .context-menu {
   text-align: center;
   position: fixed;
-  /* top: 35%; */
-  right: 50px;
+  top: 30%;
+  right: 145px;
   /* margin-top: 30px; */
   width: max-content;
+  /* width: 130px; */
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -68,12 +69,16 @@
   font-size: 16px;
 }
 
-input[type="color"] {
-  height: 38px;
-  width: 44px;
+input[type="color"] , input[type="number"] {
+  height: 28px;
+  width: 35px;
   cursor: pointer;
   border: none;
+  text-align: center;
+  align-content: center;
 }
+
+
 
 label {
   margin-left: auto;
@@ -82,9 +87,11 @@ label {
   align-self: center;
 }
 
-.xyz {
+/* .xyz {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-self: center;
-}
+  text-align: center;
+  align-content: center;
+} */

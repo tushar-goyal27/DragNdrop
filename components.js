@@ -1,23 +1,19 @@
 var componentList = {
-  navbar: `<div class="component" draggable="true" style="width: 100%;">
-        <div draggable= "false" >
-            <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#" draggable= "false" ondblclick="this.contentEditable=true;">Active</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" draggable= "false" ondblclick="this.contentEditable=true;">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" draggable= "false" ondblclick="this.contentEditable=true;">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" draggable= "false" ondblclick="this.contentEditable=true;">Disabled</a>
-      </li>
-    </ul>
-    </div>`,
-    button: `<button class="btn btn-primary component" type="submit" draggable= "true" ondblclick="this.contentEditable=true;" ><span class="edit-text">Button</span</button>`,
-    footer: `<footer class="text-center text-white component" draggable= "true" style="width: 100%;" ondblclick="this.contentEditable=true;">
+  navbar: `
+  <div class="component" ondblclick="this.contentEditable=true;" draggable="true" style="width: 80%; ">
+  <nav class="navbar navbar-dark bg-dark " draggable="true ">
+  <!-- Navbar content -->
+  <div class="container-fluid">
+    <a class="navbar-brand">Navbar</a>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</div>`,
+  button: `<button class="btn btn-primary component" type="submit" draggable= "true" ondblclick="this.contentEditable=true;" ><span class="edit-text">Button</span</button>`,
+  footer: `<footer class="text-center text-white component" draggable= "true" style="width: 78%;" ondblclick="this.contentEditable=true;">
         <!-- Grid container -->
         <div class="container pt-4" draggable= "false">
         </div>
@@ -30,7 +26,7 @@ var componentList = {
         </div>
         <!-- Copyright -->
       </footer>`,
-      card: `<div class="card component" style="width: 18rem;" draggable= "true" ondblclick="this.contentEditable=true;">
+  card: `<div class="card component" style="width: 18rem;" draggable= "true" ondblclick="this.contentEditable=true;">
         <div class="card-body" draggable="false">
           <h5 class="card-title" draggable="false">Card title</h5>
           <h6 class="card-subtitle mb-2 text-muted" draggable="false">Card subtitle</h6>
@@ -39,8 +35,8 @@ var componentList = {
           <a href="#" class="card-link" draggable="false">Another link</a> -->
         </div>
         </div>`,
-      image: `<div class="card component" style="width: 18rem;" draggable="true">
+  image: `<div class="card component" style="width: 18rem;" draggable="true">
 <img class="card-img-top " draggable="false" src="https://files.worldwildlife.org/wwfcmsprod/images/Mountains_New_Hero_Image/hero_full/9gdovvknbu_mountains_hero.jpg" alt="Card image cap"></div>`,
-      text: `<div class="card component" style="width: 18rem;" draggable="true">
-<p class="card-text"  ondblclick="this.contentEditable=true;" draggable="false">INSERT SOME TEXT HERE</p></div> `
-}
+  text: `<div class="card component" style="width: 18rem;" draggable="true">
+<p class="card-text"  ondblclick="this.contentEditable=true;" draggable="false">INSERT SOME TEXT HERE</p></div> `,
+};
