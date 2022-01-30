@@ -1,4 +1,8 @@
-var elements = document.getElementsByClassName('element')
+var elements = document.getElementsByClassName('element');
+var text=document.getElementById('TEXT');
+var bg=document.getElementById('BG');
+var fontsize=document.getElementById('fontsize');
+
 
 for (var i = 0; i < elements.length; i++) {
   id = '';
@@ -56,6 +60,13 @@ function move(component) {
     e.preventDefault();
 
     if (document.getElementById("contextMenu").style.display == "block") {
+      // console.log(e.target.style.color);
+      e.target.style.color=text.value;
+      // console.log(e.target.style.backgroundColor)
+      e.target.style.backgroundColor=bg.value;
+      // console.log(e.target.style.backgroundColor)
+      e.target.style.fontSize=fontsize.value + 'px';
+      // console.log(e.target.style.color);
       document.getElementById("contextMenu").style.display = "none";
       e.target.contentEditable = true;
     } else {
@@ -65,5 +76,8 @@ function move(component) {
       // menu.style.left = e.pageX + "px";
       // menu.style.top = e.pageY + "px";
     }
+    document.getElementById('fontsize').value=15+'px';
+    document.getElementById('TEXT').value='#000';
+    document.getElementById('BG').value='#FFFFFF' ;
   });
 }
