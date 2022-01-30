@@ -51,7 +51,11 @@ Created a web application using vanilla JavaScript from scratch without the use 
 - Component properties can also be edited (Text colour, background colour and font size)
 - With one click window can be cleared
 
- 
+## ScreenShots:
+### Initial Interface
+ ![Interface](https://github.com/tushar-goyal27/DragNdrop/blob/main/screenshots/image_2022-01-30_132007.png?raw=true)
+### Final Interface
+ ![Interface](https://github.com/tushar-goyal27/DragNdrop/blob/main/screenshots/image_2022-01-30_133230.png)
 
 # Conclusion
 
