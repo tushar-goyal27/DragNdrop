@@ -1,45 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>DragNDrop</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  </head>
-  <body>
-    <button id="navbar" class="btn btn-primary element" type="submit" draggable= "true" ><span class="edit-text">Button</span></button>
-    <div class="container" style="height=400px;width=500px">
-      <button class="btn btn-primary component" type="submit" draggable= "true" ><span class="edit-text">Button</span></button>
-      <!-- <div class="component" draggable="true">
-        <div draggable= "false">
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a class="nav-link active" draggable= "false" aria-current="page" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" draggable= "false" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" draggable= "false" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" draggable= "false" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </div> -->
+    <link rel="stylesheet" href="index.css">
+  <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
 
-      <nav class="navbar navbar-dark bg-dark">
-        <!-- Navbar content -->
-        <div class="container-fluid">
-          <a class="navbar-brand">Navbar</a>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+  <body>
+    <div class="rightside">
+      <div class="icon-bar">
+        <div class="add-elements">TOOL BOX</div>
+        <div class="tool-box">
+          <div class="icons">
+            <i class="fa fa-list-ul element" aria-hidden="true" id="navbar" draggable="true">
+              <span class="icon-text">NavBar</span></i>
+            <i class="fa fa-align-center element" aria-hidden="true" id="text" draggable="true"
+              ><span class="icon-text">InputTextArea</span></i
+            >
+            <i class="fa fa-picture-o element" aria-hidden="true" id="image" draggable="true"
+              ><span class="icon-text">Image</span></i
+            >
+          </div>
+          <div class="icons">
+            <i class="fa fa-credit-card element" aria-hidden="true" id="card" draggable="true"
+              ><span class="icon-text">Card</span></i
+            >
+            <i class="fa fa-play element" aria-hidden="true" id="button" draggable="true"
+              ><span class="icon-text">Buttons</span></i
+            >
+            <i class="fa fa-copyright element" aria-hidden="true" id="footer" draggable="true"
+              ><span class="icon-text">Footer</span></i
+            >
+            <i class="fa fa-trash-o element" id="clearScr" aria-hidden="true"
+              ><span class="icon-text">Clear Screen</span></i
+            >
+          </div>
         </div>
-      </nav>
-  </div>
+      </div>
+    </div>
+    <div id="contextMenu" class="context-menu">
+      <div class="xyz" > <b>
+        <label for="TEXT">Text</label>
+        <input type="color" id="TEXT" name="TEXT" value="#090979" />
+        <label for="BG">Bg</label>
+        <input type="color" id="BG" name="BG" value="#22c1c3" />
+        <label for="Size">Font Size</label>
+        <input type="number" id="fontsize" min="0" max="80" name="fontsize" />
+        <br>
+        <i class="fa fa-trash fa-2x" id="delete" aria-hidden="true" style="padding-top: 10px;">
+          <span class="icon-text">Delete</span></i>
+      </b></div>
+    </div>
+    <div class="container" style="width: '80%'">
+    </div>
     <script src="components.js" charset="utf-8"></script>
     <script src="main.js" charset="utf-8"></script>
-  </body>
+    <script src="alert.js" charset="utf-8"></script>
+    <script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d5903f7aec28e92',m:'gpWygF4LKN6R8oBgCL4odafUJWhHaM4MwAZerhq.TeE-1643528042-0-AR69uyw9uKJUaJQ99+vlS4evSCET/F4tXtdpoBM6r64nL0EmxOHqw38TbOztHbBkO4aP0OrMPlCp2hlmZx2ZRg5ZobWvbWpHWS4WlTz3gkCqfmB9LoGlHaGiWLxFY7277C072uzIKm4Fa4qWES1Z3Z3V88hESHgXyOQ6myrhIoN1CPW+goTeqxxPrUJI3JSyUQ==',s:[0xf080bf3127,0xd78fe2ec30],}})();</script></body>
 </html>

@@ -4,7 +4,7 @@
 
 .icon-bar {
   position: fixed;
-  top: 5%;
+  top: 15%;
   right: 10px;
   margin-top: 30px;
   width: 130px;
@@ -54,7 +54,7 @@
 .context-menu {
   text-align: center;
   position: fixed;
-  top: 30%;
+  top: 33%;
   right: 145px;
   /* margin-top: 30px; */
   width: max-content;
@@ -67,6 +67,7 @@
   padding: 5px;
   background-color: #f1f0f5;
   font-size: 16px;
+  z-index: 100;
 }
 
 input[type="color"] , input[type="number"] {
@@ -78,8 +79,6 @@ input[type="color"] , input[type="number"] {
   align-content: center;
 }
 
-
-
 label {
   margin-left: auto;
   margin-right: auto;
@@ -87,11 +86,22 @@ label {
   align-self: center;
 }
 
-/* .xyz {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-self: center;
-  text-align: center;
-  align-content: center;
-} */
+.container{
+  width: 80%;
+  position: fixed;
+}
+
+.component {
+  z-index: -1;
+}
+
+.rightside {
+  z-index: 10;
+  position: fixed;
+  height: 100%;
+  width: 16%;
+  right: 0%;
+  background: rgb(9,9,121);
+  background: linear-gradient(0deg, rgba(9,9,121,1) 40%, rgba(34,193,195,1) 100%);
+  /* border-left: solid; */
+}
